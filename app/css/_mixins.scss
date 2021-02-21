@@ -1,0 +1,15 @@
+$screen-size-s: 640px;
+$screen-size-m: 1024px;
+$screen-size-l: 1400px;
+
+@mixin breakpoint-up($size) {
+    @media (min-width: $size) {
+        @content;
+    }
+}
+
+@mixin breakpoint-down($size) {
+    @media (max-width: $size - 1) {
+        @content;
+    }
+}

@@ -1,0 +1,97 @@
+.header {
+  background-color: hsl(270, 4%, 10%);
+
+  nav {
+    display: flex;
+    ul.menu {
+      display: none;
+      li {
+        list-style-type: none;
+        text-transform: uppercase;
+        line-height: 1.5;
+        a {
+          color: $color-light-purple;
+          font-size: 36px;
+          @include breakpoint-up($screen-size-m) {
+            font-size: 56px;
+          }
+          padding: 24px;
+          font-weight: 700;
+          letter-spacing: 0.2em;
+          
+          &:hover {
+            font-style: italic;
+          }
+        }
+
+      }
+      &.open {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        transition: display ease;
+      }
+    }
+
+    .hamburger {
+      margin: 24px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 56px;
+      height: 56px;
+      background-color: $color-light-purple;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      div {
+        position: relative;
+        width: 24px;
+        height: 12px;
+
+        span {
+          display: block;
+          position: absolute;
+          width: 24px;
+          height: 4px;
+          background-color: $color-dark;
+          transition: all 0.3s cubic-bezier(0.2, 1, 0.7, 0.99);
+
+          &:first-of-type {
+            top: 0;
+          }
+          &:last-of-type {
+            bottom: 0;
+          }
+        }
+      }
+
+      &:hover {
+        span {
+          &:last-of-type {
+            width: 12px;
+          }
+        }
+      }
+
+      &.open {
+        span {
+          &:first-of-type {
+            transform: rotate(45deg);
+            top: 4px;
+          }
+          &:last-of-type {
+            transform: rotate(-45deg);
+            bottom: 4px;
+            width: 24px;
+          }
+        }
+      }
+    }
+  }
+}

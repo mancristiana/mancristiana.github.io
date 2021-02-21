@@ -1,0 +1,49 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.6;
+  font-family: $body-font-family;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+}
+
+p {
+  font-family: $body-font-family;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: $color-link;
+}
+
+.hide-on-mobile {
+  @include breakpoint-down($screen-size-s) {
+    display: none;
+  }
+}
+
+.hide-on-desktop {
+  @include breakpoint-up($screen-size-m) {
+    display: none;
+  }
+}

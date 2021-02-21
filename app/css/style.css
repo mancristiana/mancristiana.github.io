@@ -1,0 +1,171 @@
+html {
+  font-size: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.6;
+  font-family: "Open Sans", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+  color: #502bd4;
+}
+
+@media (max-width: 639px) {
+  .hide-on-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hide-on-desktop {
+    display: none;
+  }
+}
+
+.header {
+  background-color: #1a181b;
+}
+
+.header nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header nav ul.menu {
+  display: none;
+}
+
+.header nav ul.menu li {
+  list-style-type: none;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+.header nav ul.menu li a {
+  color: #c9beee;
+  font-size: 36px;
+  padding: 24px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+
+@media (min-width: 1024px) {
+  .header nav ul.menu li a {
+    font-size: 56px;
+  }
+}
+
+.header nav ul.menu li a:hover {
+  font-style: italic;
+}
+
+.header nav ul.menu.open {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  -webkit-transition: display ease;
+  transition: display ease;
+}
+
+.header nav .hamburger {
+  margin: 24px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 56px;
+  height: 56px;
+  background-color: #c9beee;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header nav .hamburger div {
+  position: relative;
+  width: 24px;
+  height: 12px;
+}
+
+.header nav .hamburger div span {
+  display: block;
+  position: absolute;
+  width: 24px;
+  height: 4px;
+  background-color: #2a2735;
+  -webkit-transition: all 0.3s cubic-bezier(0.2, 1, 0.7, 0.99);
+  transition: all 0.3s cubic-bezier(0.2, 1, 0.7, 0.99);
+}
+
+.header nav .hamburger div span:first-of-type {
+  top: 0;
+}
+
+.header nav .hamburger div span:last-of-type {
+  bottom: 0;
+}
+
+.header nav .hamburger:hover span:last-of-type {
+  width: 12px;
+}
+
+.header nav .hamburger.open span:first-of-type {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 4px;
+}
+
+.header nav .hamburger.open span:last-of-type {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  bottom: 4px;
+  width: 24px;
+}
+/*# sourceMappingURL=style.css.map */
